@@ -1,0 +1,24 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f6fa;
+            color: #2c3e50;
+        }
+
+        .noframes-message {
+            padding: 20px;
+            background-color: #BE5985;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        frameset {
+            border: 2px solid #BE5985;
+        }
+        frame {
+            border: 1px solid #ccc;
+        }

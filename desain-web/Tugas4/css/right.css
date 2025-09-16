@@ -1,0 +1,47 @@
+body {
+    background-color: #FFEDFA;
+    font-family: "Times New Roman", serif;
+    color: #BE5985;
+    margin: 0;
+    padding: 20px;
+}
+
+fieldset {
+    border: 2px solid #BE5985;
+    border-radius: 10px;
+    max-width: 400px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+legend {
+    font-size: 1.2rem;
+    color: #BE5985;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #BE5985;
+    color: white;
+}

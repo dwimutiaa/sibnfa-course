@@ -1,0 +1,40 @@
+body {
+    background-color: #f5f6fa;
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #BE5985;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery a:hover img {
+    transform: scale(1.1);
+}
