@@ -28,23 +28,24 @@
   <p id="hasil-sg"></p>
 
   <script>
+    // Berfungsi untuk menghitung luas persegi panjang //
     function hitungPP() {
-      let p = document.getElementById("pp-panjang").value;
-      let l = document.getElementById("pp-lebar").value;
-      let luas = p * l;
+      let p = document.getElementById("pp-panjang").value; // nilai panjang //
+      let l = document.getElementById("pp-lebar").value; // nilai lebar //
+      let luas = p * l; // rumus persegi panjang ( panjang x lebar )
       document.getElementById("hasil-pp").innerHTML = "Luas = " + luas;
     }
 
     function hitungBS() {
-      let s = document.getElementById("bs-sisi").value;
-      let luas = s * s;
+      let s = document.getElementById("bs-sisi").value; // nilai luas //
+      let luas = s * s; // rumus bujur sangkar ( sisi x sisi )
       document.getElementById("hasil-bs").innerHTML = "Luas = " + luas;
     }
 
     function hitungSG() {
-      let a = document.getElementById("sg-alas").value;
-      let t = document.getElementById("sg-tinggi").value;
-      let luas = 0.5 * a * t;
+      let a = document.getElementById("sg-alas").value; // nilai alas //
+      let t = document.getElementById("sg-tinggi").value; // nilai tinggi //
+      let luas = 0.5 * a * t; // rumus segitiga ( alas x tinggi ) )
       document.getElementById("hasil-sg").innerHTML = "Luas = " + luas;
     }
   </script>
