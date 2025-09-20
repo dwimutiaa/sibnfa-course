@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Menghitung Luas Bangun Datar</title>
+</head>
+<body>
+  <h2>Menghitung luas dari persegi panjang, bujur sangkar dan segitiga menggunakan variabel dan operator.</h2>
+
+  <!-- Perhitungan persegi panjang (Panjang x Lebar)-->
+  <h3>Persegi Panjang</h3>
+  Panjang: <input id="pp-panjang" type="number"><br>
+  Lebar: <input id="pp-lebar" type="number"><br>
+  <button onclick="hitungPP()">Hitung</button>
+  <p id="hasil-pp"></p>
+
+  <!-- Perhitungan Bujur Sangkar (Sisi x Sisi) -->
+  <h3>Bujur Sangkar</h3>
+  Sisi: <input id="bs-sisi" type="number"><br>
+  <button onclick="hitungBS()">Hitung</button>
+  <p id="hasil-bs"></p>
+
+  <!-- Perhitungan Segitiga (Alas x tinggi)-->
+  <h3>Segitiga</h3>
+  Alas: <input id="sg-alas" type="number"><br>
+  Tinggi: <input id="sg-tinggi" type="number"><br>
+  <button onclick="hitungSG()">Hitung</button>
+  <p id="hasil-sg"></p>
+
+  <script>
+    // Berfungsi untuk menghitung luas persegi panjang //
+    function hitungPP() {
+      let p = document.getElementById("pp-panjang").value; // nilai panjang //
+      let l = document.getElementById("pp-lebar").value; // nilai lebar //
+      let luas = p * l; // rumus persegi panjang ( panjang x lebar )
+      document.getElementById("hasil-pp").innerHTML = "Luas = " + luas;
+    }
+
+    function hitungBS() {
+      let s = document.getElementById("bs-sisi").value; // nilai luas //
+      let luas = s * s; // rumus bujur sangkar ( sisi x sisi )
+      document.getElementById("hasil-bs").innerHTML = "Luas = " + luas;
+    }
+
+    function hitungSG() {
+      let a = document.getElementById("sg-alas").value; // nilai alas //
+      let t = document.getElementById("sg-tinggi").value; // nilai tinggi //
+      let luas = 0.5 * a * t; // rumus segitiga ( alas x tinggi ) )
+      document.getElementById("hasil-sg").innerHTML = "Luas = " + luas;
+    }
+  </script>
+</body>
+</html>
