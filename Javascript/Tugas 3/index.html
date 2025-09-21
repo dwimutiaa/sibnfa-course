@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 3 Java Script</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sistem Manajemen Toko Online</h1>
+
+  <!-- Form tambah produk -->
+  <section class="card">
+    <h2>Tambah Produk</h2>
+    <form id="formTambah">
+      <label>Nama:
+        <input type="text" id="nama" required>
+      </label>
+      <label>Harga:
+        <input type="number" id="harga" required>
+      </label>
+      <label>Stok:
+        <input type="number" id="stok" required>
+      </label>
+      <button type="submit">Tambah</button>
+    </form>
+  </section>
+
+  <!-- Form hapus produk -->
+  <section class="card">
+    <h2>Hapus Produk (berdasarkan ID)</h2>
+    <form id="formHapus">
+      <input type="number" id="idHapus" placeholder="ID produk" required>
+      <button type="submit">Hapus</button>
+    </form>
+  </section>
+
+  <!-- Tabel produk -->
+  <section class="card">
+    <h2>Daftar Produk</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nama</th>
+          <th>Harga (Rp)</th>
+          <th>Stok</th>
+        </tr>
+      </thead>
+      <tbody id="tabelProduk"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
