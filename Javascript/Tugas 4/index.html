@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 4 Sistem Manajemen Transportasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistem Manajemen Transportasi</h1>
+  </header>
+
+  <main>
+    <section class="form-area">
+      <h2>Form Penyewaan</h2>
+      <form id="formPenyewaan">
+        <label>
+          Nama:
+          <input type="text" id="nama" required>
+        </label>
+        <label>
+          Nomor Telepon:
+          <input type="tel" id="telepon" required>
+        </label>
+        <label>
+          Kendaraan:
+          <select id="kendaraan" required>
+            <option value="">-- Pilih --</option>
+            <option value="Mobil">Mobil</option>
+            <option value="Motor">Motor</option>
+            <option value="Bus">Bus</option>
+            <option value="Sepeda">Sepeda</option>
+            <option value="Helikopter">Helikopter</option>
+          </select>
+        </label>
+        <button type="submit">Tambah</button>
+      </form>
+    </section>
+
+    <section class="list-area">
+      <h2>Daftar Pelanggan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Telepon</th>
+            <th>Kendaraan</th>
+          </tr>
+        </thead>
+        <tbody id="daftarPelanggan"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
