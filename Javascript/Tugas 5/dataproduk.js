@@ -43,4 +43,4 @@ tampilkanProduk();                    // setelah ditambahkan produk
 eventHandler.hapus(2, 4);             // menghapus produk Gamis & Dress tunik
 tampilkanProduk();                    // setelah hapus
 
-// nampilin hasil/tampilan tugas ini lewat terminal lokal = node produkdata.js
+// nampilin hasil/tampilan tugas ini lewat terminal lokal = node dataproduk.js
