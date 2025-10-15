@@ -100,7 +100,7 @@
         <label>Nilai Ujian:</label>
         <input type="number" name="nilai" required min="0" max="100">
 
-        <input type="submit" name="proses" value="Tampilkan Hasil">
+        <input type="submit" name="proses" value="Kirim">
     </form>
 
     <?php
