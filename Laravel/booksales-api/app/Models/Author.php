@@ -2,16 +2,19 @@
 
 namespace App\Models;
 
-class Author
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Book; // <--- Tambahkan ini biar Book dikenal
+
+class Author extends Model
 {
-    public static function all()
+    use HasFactory;
+
+    protected $fillable = ['name'];
+
+    // Relasi ke Book
+    public function books()
     {
-        return [
-            ['id' => 1, 'name' => 'Pramoedya Ananta Toer'],
-            ['id' => 2, 'name' => 'Tere Liye'],
-            ['id' => 3, 'name' => 'Dee Lestari'],
-            ['id' => 4, 'name' => 'Risa Saraswati'],
-            ['id' => 5, 'name' => 'Nadine Fatihah'],
-        ];
+        return $this->hasMany(Book::class);
     }
 }
