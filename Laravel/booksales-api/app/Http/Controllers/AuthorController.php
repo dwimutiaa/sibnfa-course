@@ -16,6 +16,10 @@ class AuthorController extends Controller
             ['id' => 5, 'name' => 'Nadine Fatihah'],
         ];
 
-        return view('author', compact('authors'));
+        // Output JSON, bukan view
+        return response()->json([
+            'success' => true,
+            'data' => $authors
+        ]);
     }
 }

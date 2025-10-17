@@ -11,13 +11,15 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('publisher');
-            $table->integer('year');
-            $table->unsignedBigInteger('author_id'); // relasi ke tabel authors
+            $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('genre_id');
+            $table->decimal('price', 10, 2);
+            $table->string('publisher')->nullable();
+            $table->string('year')->nullable();
             $table->timestamps();
 
-            // foreign key ke tabel authors
-            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
+            // foreign key (optional)
+            // $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
         });
     }
 
