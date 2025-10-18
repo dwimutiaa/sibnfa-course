@@ -9,36 +9,87 @@ class GenreController extends Controller
 {
     public function index()
     {
-        
-        if (Genre::count() === 0) {
-            $defaultGenres = [
-                ['name' => 'Fiction', 'description' => 'Cerita rekaan atau imajinatif.'],
-                ['name' => 'Romance', 'description' => 'Berkisah tentang cinta dan hubungan.'],
-                ['name' => 'Science', 'description' => 'Berkaitan dengan ilmu pengetahuan.'],
-                ['name' => 'Fantasy', 'description' => 'Mengandung unsur magis dan dunia imajinatif.'],
-                ['name' => 'Mystery', 'description' => 'Penuh teka-teki dan penyelidikan.'],
-            ];
+        return response()->json([
+            'success' => true,
+            'message' => 'List of genres',
+            'data' => Genre::all()
+        ]);
+    }
 
-            foreach ($defaultGenres as $genre) {
-                Genre::create($genre);
-            }
+    public function show($id)
+    {
+        $genre = Genre::find($id);
+
+        if (!$genre) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Genre not found'
+            ], 404);
         }
 
-        return response()->json(Genre::all());
+        return response()->json([
+            'success' => true,
+            'data' => $genre
+        ]);
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'description' => 'nullable|string'
         ]);
 
         $genre = Genre::create($validated);
 
         return response()->json([
+            'success' => true,
             'message' => 'Genre created successfully',
-            'data' => $genre,
+            'data' => $genre
+        ], 201);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $genre = Genre::find($id);
+
+        if (!$genre) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Genre not found'
+            ], 404);
+        }
+
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string'
+        ]);
+
+        $genre->update($validated);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Genre updated successfully',
+            'data' => $genre
+        ]);
+    }
+
+    public function destroy($id)
+    {
+        $genre = Genre::find($id);
+
+        if (!$genre) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Genre not found'
+            ], 404);
+        }
+
+        $genre->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Genre deleted successfully'
         ]);
     }
 }

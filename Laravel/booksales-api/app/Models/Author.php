@@ -4,15 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Book; //
+use App\Models\Book;
 
 class Author extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'email', 'bio'];
 
-    // Relasi ke Book
     public function books()
     {
         return $this->hasMany(Book::class);

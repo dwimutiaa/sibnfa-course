@@ -10,11 +10,46 @@ class BookSeeder extends Seeder
     public function run(): void
     {
         Book::insert([
-            ['title' => 'Bumi', 'publisher' => 'Gramedia', 'year' => 2014, 'author_id' => 2],
-            ['title' => 'Perahu Kertas', 'publisher' => 'Bentang Pustaka', 'year' => 2009, 'author_id' => 3],
-            ['title' => 'Pulang', 'publisher' => 'Lentera Hati', 'year' => 2015, 'author_id' => 2],
-            ['title' => 'Anak Semua Bangsa', 'publisher' => 'Hasta Mitra', 'year' => 1980, 'author_id' => 1],
-            ['title' => 'Danur', 'publisher' => 'Bukune', 'year' => 2011, 'author_id' => 4],
+            [
+                'author_id' => 2,
+                'genre_id' => 1,
+                'publisher' => 'Gramedia',
+                'title' => 'Bumi',
+                'year' => 2014,
+                'price' => 85000,
+            ],
+            [
+                'author_id' => 3,
+                'genre_id' => 2,
+                'publisher' => 'Bentang Pustaka',
+                'title' => 'Perahu Kertas',
+                'year' => 2009,
+                'price' => 90000,
+            ],
+            [
+                'author_id' => 2,
+                'genre_id' => 1,
+                'publisher' => 'Lentera Hati',
+                'title' => 'Pulang',
+                'year' => 2015,
+                'price' => 78000,
+            ],
+            [
+                'author_id' => 1,
+                'genre_id' => 3,
+                'publisher' => 'Hasta Mitra',
+                'title' => 'Anak Semua Bangsa',
+                'year' => 1980,
+                'price' => 65000,
+            ],
+            [
+                'author_id' => 4,
+                'genre_id' => 4,
+                'publisher' => 'Bukune',
+                'title' => 'Danur',
+                'year' => 2011,
+                'price' => 72000,
+            ],
         ]);
     }
 }
