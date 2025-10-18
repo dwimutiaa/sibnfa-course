@@ -2,16 +2,38 @@
 
 namespace App\Models;
 
-class Genre
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Genre extends Model
 {
-    public static function all()
+    use HasFactory;
+
+    protected $fillable = ['name', 'description'];
+
+    protected static function booted()
     {
-        return [
-            ['id' => 1, 'name' => 'Fiction'],
-            ['id' => 2, 'name' => 'Romance'],
-            ['id' => 3, 'name' => 'Science'],
-            ['id' => 4, 'name' => 'Fantasy'],
-            ['id' => 5, 'name' => 'Mystery'],
-        ];
+        static::creating(function ($genre) {
+           
+            $genre->name = ucfirst($genre->name);
+        });
+
+        static::retrieved(function () {
+        
+        });
+
+           if (self::count() === 0) {
+            $defaultGenres = [
+                ['name' => 'Fiction',  'description' => 'Cerita rekaan atau imajinatif.'],
+                ['name' => 'Romance',  'description' => 'Berkisah tentang cinta dan hubungan.'],
+                ['name' => 'Science',  'description' => 'Berkaitan dengan ilmu pengetahuan.'],
+                ['name' => 'Fantasy',  'description' => 'Mengandung unsur magis dan dunia imajinatif.'],
+                ['name' => 'Mystery',  'description' => 'Penuh teka-teki dan penyelidikan.'],
+            ];
+
+            foreach ($defaultGenres as $genre) {
+                self::create($genre);
+            }
+        }
     }
 }
