@@ -21,22 +21,17 @@ class AuthorController extends Controller
         $author = Author::find($id);
 
         if (!$author) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Author not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Author not found'], 404);
         }
 
-        return response()->json([
-            'success' => true,
-            'data' => $author
-        ]);
+        return response()->json(['success' => true, 'data' => $author]);
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:authors',
             'bio' => 'nullable|string'
         ]);
 
@@ -46,7 +41,7 @@ class AuthorController extends Controller
             'success' => true,
             'message' => 'Author created successfully',
             'data' => $author
-        ], 201);
+        ]);
     }
 
     public function update(Request $request, $id)
@@ -54,14 +49,12 @@ class AuthorController extends Controller
         $author = Author::find($id);
 
         if (!$author) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Author not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Author not found'], 404);
         }
 
         $validated = $request->validate([
             'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:authors,email,' . $id,
             'bio' => 'nullable|string'
         ]);
 
@@ -79,17 +72,11 @@ class AuthorController extends Controller
         $author = Author::find($id);
 
         if (!$author) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Author not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Author not found'], 404);
         }
 
         $author->delete();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Author deleted successfully'
-        ]);
+        return response()->json(['success' => true, 'message' => 'Author deleted successfully']);
     }
 }

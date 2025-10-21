@@ -19,18 +19,11 @@ class GenreController extends Controller
     public function show($id)
     {
         $genre = Genre::find($id);
-
         if (!$genre) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Genre not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Genre not found'], 404);
         }
 
-        return response()->json([
-            'success' => true,
-            'data' => $genre
-        ]);
+        return response()->json(['success' => true, 'data' => $genre]);
     }
 
     public function store(Request $request)
@@ -46,18 +39,14 @@ class GenreController extends Controller
             'success' => true,
             'message' => 'Genre created successfully',
             'data' => $genre
-        ], 201);
+        ]);
     }
 
     public function update(Request $request, $id)
     {
         $genre = Genre::find($id);
-
         if (!$genre) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Genre not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Genre not found'], 404);
         }
 
         $validated = $request->validate([
@@ -67,29 +56,18 @@ class GenreController extends Controller
 
         $genre->update($validated);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Genre updated successfully',
-            'data' => $genre
-        ]);
+        return response()->json(['success' => true, 'message' => 'Genre updated successfully', 'data' => $genre]);
     }
 
     public function destroy($id)
     {
         $genre = Genre::find($id);
-
         if (!$genre) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Genre not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Genre not found'], 404);
         }
 
         $genre->delete();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Genre deleted successfully'
-        ]);
+        return response()->json(['success' => true, 'message' => 'Genre deleted successfully']);
     }
 }

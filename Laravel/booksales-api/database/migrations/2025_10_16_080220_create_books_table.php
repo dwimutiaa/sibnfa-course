@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('year')->nullable();
             $table->timestamps();
 
-            // foreign key (optional)
-            // $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
         });
     }
 

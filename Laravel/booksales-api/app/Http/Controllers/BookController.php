@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    // GET all books
     public function index()
     {
-        $books = Book::with('author')->get(); // ambil data beserta relasi author
+        $books = Book::with(['author', 'genre'])->get();
 
         return response()->json([
             'success' => true,
@@ -19,25 +18,17 @@ class BookController extends Controller
         ]);
     }
 
-    // GET single book
     public function show($id)
     {
-        $book = Book::with('author')->find($id);
+        $book = Book::with(['author', 'genre'])->find($id);
 
         if (!$book) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Book not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Book not found'], 404);
         }
 
-        return response()->json([
-            'success' => true,
-            'data' => $book
-        ]);
+        return response()->json(['success' => true, 'data' => $book]);
     }
 
-    // POST create new book
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -51,51 +42,32 @@ class BookController extends Controller
 
         $book = Book::create($validated);
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Book created successfully',
-            'data' => $book
-        ], 201);
+        return response()->json(['success' => true, 'message' => 'Book created successfully', 'data' => $book]);
     }
 
-    // PUT update book
     public function update(Request $request, $id)
     {
         $book = Book::find($id);
 
         if (!$book) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Book not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Book not found'], 404);
         }
 
         $book->update($request->all());
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Book updated successfully',
-            'data' => $book
-        ]);
+        return response()->json(['success' => true, 'message' => 'Book updated successfully', 'data' => $book]);
     }
 
-    // DELETE book
     public function destroy($id)
     {
         $book = Book::find($id);
 
         if (!$book) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Book not found'
-            ], 404);
+            return response()->json(['success' => false, 'message' => 'Book not found'], 404);
         }
 
         $book->delete();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Book deleted successfully'
-        ]);
+        return response()->json(['success' => true, 'message' => 'Book deleted successfully']);
     }
 }
