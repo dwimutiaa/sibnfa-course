@@ -47,6 +47,8 @@ class Kernel extends HttpKernel
 
     // Tambahkan ini 👇
     'role' => \App\Http\Middleware\AdminMiddleware::class,
+    'admin' => \App\Http\Middleware\AdminMiddleware::class,
+    'user' => \App\Http\Middleware\UserMiddleware::class,
 ];
 
 }
