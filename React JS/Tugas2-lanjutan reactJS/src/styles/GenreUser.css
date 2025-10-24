@@ -1,0 +1,138 @@
+/* ====== Global Page Layout ====== */
+.page-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff0f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+}
+
+h2 {
+  text-align: center;
+  color: #F2BED1;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== Form Styles ====== */
+.simple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffe4ec;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px rgba(255, 182, 193, 0.5);
+  margin-bottom: 25px;
+}
+
+.simple-form input {
+  padding: 12px 15px;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.simple-form input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+}
+
+.btn-primary {
+  background: #F2BED1;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #F2BED1;
+  transform: translateY(-2px);
+}
+
+/* ====== Genre List ====== */
+.genre-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.genre-list li {
+  background: white;
+  border: 1px solid #ffd1dc;
+  border-radius: 10px;
+  padding: 15px 18px;
+  box-shadow: 0 2px 6px rgba(255, 192, 203, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.genre-list li b {
+  color: #ff69b4;
+  font-size: 17px;
+}
+
+.genre-list li .btn {
+  background: #ffb6c1;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.genre-list li .btn:hover {
+  background: #ff69b4;
+}
+
+.genre-list li .btn-danger {
+  background: #ff4f81;
+}
+
+.genre-list li .btn-danger:hover {
+  background: #ff1e56;
+}
+
+/* ====== Error Message ====== */
+.error-text {
+  color: #d63384;
+  background: #ffe6f0;
+  border: 1px solid #ffa3c0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  .page-container {
+    padding: 20px;
+  }
+
+  .simple-form {
+    padding: 15px;
+  }
+
+  .btn-primary,
+  .genre-list li .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

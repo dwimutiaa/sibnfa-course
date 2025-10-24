@@ -1,0 +1,73 @@
+.genre-page-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fffafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.genre-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.genre-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background-color: #F2BED1 ;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #ddd;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #a7c7e7;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #f28b82;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.genre-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.genre-table th,
+.genre-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.error-text {
+  color: red;
+  margin-bottom: 10px;
+}

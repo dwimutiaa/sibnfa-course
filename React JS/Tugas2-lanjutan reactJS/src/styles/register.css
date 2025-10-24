@@ -1,0 +1,99 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: pink;
+}
+
+.register-form {
+  background: #fff;
+  padding: 35px 45px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.register-form label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+  margin-top: 5px;
+}
+
+.register-form input,
+.register-form select {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.register-button {
+  background-color: pink;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.register-button:hover {
+  background-color: pink;
+}
+
+.register-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+.register-footer a {
+  color: pink;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  background-color: #ffe5e5;
+  color: #b00020;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #e5ffe9;
+  color: #007b26;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
