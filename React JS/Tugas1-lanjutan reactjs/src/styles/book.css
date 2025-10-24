@@ -1,0 +1,266 @@
+/* 🌸 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fffafc;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* 🌸 Navbar */
+.navbar {
+  background-color: #f2bed1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #8b5e83;
+}
+
+.navbar button {
+  background: #e89dbf;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background: #d284a3;
+  transform: scale(1.05);
+}
+
+/* 🌸 Auth Container (Login/Register) */
+.auth-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: #d57ca4;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #f2bed1;
+  outline: none;
+}
+
+.auth-form button {
+  background-color: #f2bed1;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #d57ca4;
+  transform: translateY(-2px);
+}
+
+.auth-container p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.auth-container a {
+  color: #d57ca4;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+.error-text {
+  color: #e74c3c;
+  background: #fbeaea;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* 🌸 Page Container */
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.page-container h1,
+.page-container h2 {
+  color: #d57ca4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.page-container p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* 🌸 Table Style */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table th {
+  background-color: #f2bed1;
+  color: #333;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.table tr:hover {
+  background-color: #fff2f7;
+}
+
+/* 🌸 Genre List */
+.genre-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.genre-list li {
+  background: white;
+  border: 1px solid #f2bed1;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.genre-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 🌸 Buttons */
+.btn {
+  display: inline-block;
+  background-color: #f2bed1;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d57ca4;
+  transform: translateY(-2px);
+}
+
+/* 🌸 Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 8px 0;
+  }
+
+  .page-container {
+    padding: 10px;
+  }
+
+  .auth-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-form input,
+  .auth-form select,
+  .auth-form button {
+    font-size: 0.9rem;
+  }
+
+  .page-container h1,
+  .page-container h2 {
+    font-size: 1.2rem;
+  }
+}
