@@ -1,20 +1,20 @@
-.genre-page-container {
-  max-width: 800px;
+.author-page-container {
+  max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background: #fffafc;
+  background: #fef9ff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.genre-form {
+.author-form {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.genre-form input {
+.author-form input {
   flex: 1;
   padding: 8px;
   border: 1px solid #ccc;
@@ -22,7 +22,7 @@
 }
 
 .btn-primary {
-  background-color: #F2BED1 ;
+  background-color: #b5ead7;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
@@ -38,7 +38,7 @@
 }
 
 .btn-edit {
-  background-color: #a7c7e7;
+  background-color: #a0c4ff;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
@@ -47,20 +47,20 @@
 }
 
 .btn-danger {
-  background-color: #f28b82;
+  background-color: #ffadad;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.genre-table {
+.author-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.genre-table th,
-.genre-table td {
+.author-table th,
+.author-table td {
   border-bottom: 1px solid #ddd;
   padding: 10px;
   text-align: left;
@@ -70,4 +70,31 @@
 .error-text {
   color: red;
   margin-bottom: 10px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .author-form {
+    flex-direction: column;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+
+  .author-table th,
+  .author-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .author-page-container {
+    padding: 15px;
+  }
+
+  .btn-edit, .btn-danger {
+    width: 100%;
+    margin: 4px 0;
+  }
 }

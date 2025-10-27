@@ -1,7 +1,7 @@
-/* global */
+/* ====== Global ====== */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fff0f5; /* soft pink background */
+  background-color: #fff0f5;
   margin: 0;
   padding: 0;
   color: #333;
@@ -16,27 +16,23 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* headings */
 h1, h2 {
-  color: #F2BED1 ; /* deep pink */
+  color: #F2BED1;
   margin-bottom: 1rem;
 }
 
-/* paragraphs */
 p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
-/* navbar */
 .navbar {
-  background-color: #ff77a9; /* bright pink */
+  background-color: #ff77a9;
   padding: 1rem 2rem;
   color: white;
   font-weight: 600;
 }
 
-/* links & buttons */
 .admin-links, .simple-form {
   display: flex;
   gap: 1rem;
@@ -74,7 +70,6 @@ p {
   background-color: #e62a57;
 }
 
-/* form inputs */
 .simple-form {
   flex-direction: column;
   margin-bottom: 2rem;
@@ -87,14 +82,12 @@ p {
   font-size: 1rem;
 }
 
-/* error messages */
 .error-text {
   color: #ff1a75;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-/* table styling */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -116,7 +109,19 @@ p {
   background-color: #ffe6f0;
 }
 
-/* responsive tweaks */
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .page-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .admin-links, .simple-form {
     flex-direction: column;
@@ -125,5 +130,23 @@ p {
   .btn-primary, .btn-danger {
     width: 100%;
     text-align: center;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .page-container {
+    padding: 1rem;
   }
 }

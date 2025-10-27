@@ -71,30 +71,3 @@
   color: red;
   margin-bottom: 10px;
 }
-
-/* ====== Responsive ====== */
-@media (max-width: 768px) {
-  .author-form {
-    flex-direction: column;
-  }
-
-  .btn-primary, .btn-secondary {
-    width: 100%;
-  }
-
-  .author-table th,
-  .author-table td {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .author-page-container {
-    padding: 15px;
-  }
-
-  .btn-edit, .btn-danger {
-    width: 100%;
-    margin: 4px 0;
-  }
-}
