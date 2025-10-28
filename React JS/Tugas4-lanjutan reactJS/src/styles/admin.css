@@ -1,0 +1,152 @@
+/* ====== Global ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+  color: #F2BED1;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.navbar {
+  background-color: #ff77a9;
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: 600;
+}
+
+.admin-links, .simple-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #ff4da6;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #e33d91;
+}
+
+.btn-danger {
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #e62a57;
+}
+
+.simple-form {
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.simple-form input {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffb6c1;
+  font-size: 1rem;
+}
+
+.error-text {
+  color: #ff1a75;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ffc0cb;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.table th {
+  background-color: #ffb6c1;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #ffe6f0;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .page-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-links, .simple-form {
+    flex-direction: column;
+  }
+
+  .btn-primary, .btn-danger {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .page-container {
+    padding: 1rem;
+  }
+}

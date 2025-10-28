@@ -1,0 +1,99 @@
+/* navbar container */
+.navbar {
+  background-color: #F2BED1 ; /* deep pink */
+  padding: 0.8rem 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand span {
+  font-weight: 400;
+  color: #ffe6f0;
+}
+
+/* links */
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffe6f0;
+}
+
+/* right side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-user {
+  font-weight: 500;
+}
+
+/* buttons */
+.btn-logout,
+.btn-login,
+.btn-register {
+  background-color: #fff;
+  color: #ff4da6;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-logout:hover,
+.btn-login:hover,
+.btn-register:hover {
+  background-color: #ffe6f0;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+}

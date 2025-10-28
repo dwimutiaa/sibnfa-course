@@ -1,0 +1,100 @@
+.author-page-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fef9ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.author-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.author-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background-color: #b5ead7;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #ddd;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #a0c4ff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #ffadad;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.author-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.author-table th,
+.author-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.error-text {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .author-form {
+    flex-direction: column;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+
+  .author-table th,
+  .author-table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .author-page-container {
+    padding: 15px;
+  }
+
+  .btn-edit, .btn-danger {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
